@@ -7,12 +7,12 @@
 //---------------------------
 @import "./Mixin.less";
 
-  //rm-attr
-  //---------------------------
+//rm-attr
+//---------------------------
 
-  @import "./rm-attr.less";
+@import "./rm-attr.less";
 
-  //generate
+//generate
 //----------------------------
 @import "./_generate.less";
 
@@ -44,3 +44,41 @@
 //----------------------------
 
 @import "./_footer.less";
+
+
+//responsive 768
+//---------------------------
+
+@media screen and (min-width: 768px) {
+
+  .category {
+    text-align: center;
+  }
+
+  .footer-top__title {
+    display: revert;
+  }
+
+  .footer-top {
+    width: calc(99% - 10px);
+    justify-content: center;
+    left: 0;
+    right: 0;
+  }
+
+  .footer-info {
+    .flex;
+
+    .footer-app__qr {
+      order: 2;
+    }
+
+    .footer-app__moblie {
+      order: 1;
+    }
+
+  }
+  li{
+    margin: revert;
+  }
+}
