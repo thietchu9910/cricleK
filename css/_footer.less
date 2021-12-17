@@ -1,0 +1,118 @@
+footer {
+    background: #F4F4F4;
+    position: relative;
+}
+
+.footer-top {
+    background: @color-secondary;
+    border-radius: 20px;
+    padding-top: 20px;
+    margin: 0 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    .flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: -16%;
+
+    .footer-top__title {
+        display: none;
+    }
+
+    .footer-top__social {
+        .flex;
+
+        li {
+            padding-left: 10px;
+        }
+    }
+
+    .footer-form {
+        display: block;
+    }
+
+    .footer-form {
+        input {
+            .input-secondary;
+        }
+
+        button {
+            .btn-secondary;
+        }
+    }
+
+}
+
+.footer-middle {
+    text-align: center;
+    .footer-title {
+        padding-top: 100px;
+        color: @color-primary;
+        font-style: italic;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        i {
+            font-weight: 600;
+            display: block;
+            font-weight: @font-weight__semibold;
+        }
+    }
+.footer-address{
+    text-align: left;
+}
+    .footer-info {
+        margin: 0 20px;
+
+        .footer-address {
+            .desc-primary;
+            display: inline-block;
+        }
+
+        .footer-app {
+            .flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            margin-top: 5px;
+
+            .footer-app__qr {
+                margin-right: 10px;
+            }
+
+            .footer-app__moblie {
+                display: inline-grid;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    margin-bottom: 50px;
+    border-top: 1px solid #9A9A9C;
+    padding-top: 21.5px;
+
+    ul {
+        .flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    li {
+        border-right: 0.5px solid #9A9A9C;
+       margin-bottom: 18px;
+    }
+
+    li:first-child {
+        padding-left: 0;
+    }
+
+    a,
+    span {
+        margin: 0 10px;
+        .desc-primary;
+    }
+}

@@ -1,0 +1,82 @@
+//header 
+//---------------------------
+
+.header-mobile {
+ padding-top: 50px;
+  .flex;
+  background: @color-primary;
+  padding: 40px 20px 7.5px 20px;
+  border-bottom: 1px solid #fff;
+}
+
+.header-form {
+  position: relative;
+  margin: 0 12px;
+
+  input {
+    .input-primary;
+  }
+
+  button {
+    background: none;
+    position: absolute;
+    border: none;
+    right: 10px;
+  }
+}
+
+.header-action {
+  li {
+    margin-right: 10px;
+  }
+}
+
+hr {
+  border: 6.97px solid #F99B2A;
+  background: #F99B2A;
+  margin: 0;
+}
+
+.header-footer {
+  text-align: center;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  .header-footer__top {
+    .flex;
+    margin: 0 20px;
+    justify-content: space-between;
+
+    .contact {
+      .flex;
+      flex-direction: column;
+    }
+  }
+
+  .header-footer__bottom {
+    position: relative;
+    .flex;
+    background: #fff;
+    padding: 10px 20px 0 20px;
+
+    .header-footer__acount {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    p {
+      line-height: 9.75px;
+      font-size: 8px;
+      font-weight: 600;
+      color: #333333;
+    }
+  }
+}
