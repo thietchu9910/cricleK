@@ -1,11 +1,16 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".product", {
+  var product = new Swiper(".product", {
     slidesPerView: 2.5,
     loop: true,
     initialSlide: 0,
     spaceBetween: 30,
     grabCursor: true,
-    
+    breakpoints: {
+      1024 : {
+        init: false
+      }
+    }
+
   });
 
   var swiper = new Swiper(".slider", {
@@ -18,14 +23,27 @@ $(document).ready(function () {
     },
   });
 
-  var swiper = new Swiper(".services", {
+  var swiper = new Swiper(".services__inner", {
     slidesPerView: 4,
     loop: true,
+    breakpoints: {
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    },
   });
 
 
-  var swiper = new Swiper(".news", {
+  var news = new Swiper(".news", {
     slidesPerView: 3,
     spaceBetween: 20,
   });
 });
+
+
+var width = $(window).width();
+console.log(width);
+if (width >= 1024) {
+  delete news;
+}

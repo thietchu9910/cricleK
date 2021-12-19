@@ -130,11 +130,18 @@
     .desc(@font-size__sx, @line-height__medium, @font-weight-primary);
 }
 
+.desc-primary-desktop{
+.desc(@font-size-primary-desktop, @line-height__small--desktop, @font-weight-primary)
+}
+
+.desc-secondary-desktop{
+    .desc(@font-size__m, @line-height__mediumer ,@font-weight-primary);
+}
+
 //
 // Container body
 //----------------------------------------------
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
 }

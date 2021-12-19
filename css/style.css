@@ -299,13 +299,16 @@ hr {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   align-items: start;
+  padding: 0 20px;
+}
+.category ul p {
   font-size: 10px;
   font-weight: 500;
   color: #737B7D;
   line-height: 14px;
-  padding: 0 20px;
+  color: #000000;
 }
-.category ul:hover {
+.category ul p:hover {
   color: #EE2E24;
   font-weight: 600;
 }
@@ -641,31 +644,14 @@ footer {
   color: #EE2E24;
   font-weight: 600;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .category {
     text-align: center;
   }
-  .footer-top__title {
-    display: revert;
-  }
-  .footer-top {
-    width: calc(99% - 10px);
-    justify-content: center;
-    left: 0;
-    right: 0;
-  }
-  .footer-info {
+  .footer-middle .footer-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .footer-info .footer-app__qr {
-    order: 2;
-  }
-  .footer-info .footer-app__moblie {
-    order: 1;
-  }
-  li {
-    margin: revert;
+    flex-direction: column;
   }
 }
