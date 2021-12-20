@@ -7,7 +7,9 @@ $(document).ready(function () {
     grabCursor: true,
     breakpoints: {
       1024 : {
-        init: false
+        slidesPerView: 7,
+        // enabled: false,
+
       }
     }
 
@@ -32,6 +34,14 @@ $(document).ready(function () {
         spaceBetween: 20,
       },
     },
+    slidesPerView: 4.5,
+    initialSlide: 0,
+    breakpoints: {
+        768: {
+            slidesPerView: 6,
+            sticky: false,
+        },
+    },
   });
 
 
@@ -39,11 +49,14 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 20,
   });
+  
+  
+  var width = $(window).width();
+  if (width >= 1024) {
+    product.swiper().destroy(false, false);
+    product = undefined;
+    $('.product').removeAttr('style');
+    $('.product').removeAttr('style'); 
+    $('.product').unbind();
+  }
 });
-
-
-var width = $(window).width();
-console.log(width);
-if (width >= 1024) {
-  delete news;
-}

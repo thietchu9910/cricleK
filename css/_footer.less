@@ -4,6 +4,7 @@ footer {
 }
 
 .footer-top {
+    .container;
     background: @color-secondary;
     border-radius: 20px;
     padding-top: 20px;
@@ -45,6 +46,8 @@ footer {
 
 .footer-middle {
     text-align: center;
+    .container;
+
     .footer-title {
         padding-top: 100px;
         color: @color-primary;
@@ -60,14 +63,19 @@ footer {
             font-weight: @font-weight__semibold;
         }
     }
-.footer-address{
-    text-align: left;
-}
-    .footer-info {
-        margin: 0 20px;
 
+    .footer-address {
+        text-align: left;
+    }
+
+    .footer-info {
         .footer-address {
             .desc-primary;
+
+            :hover {
+                color: unset;
+            }
+
             display: inline-block;
         }
 
@@ -91,7 +99,8 @@ footer {
 }
 
 .footer-bottom {
-    padding-bottom: 100px;
+    .container;
+    padding-bottom: 150px;
     border-top: 1px solid #9A9A9C;
     padding-top: 21.5px;
 
@@ -103,16 +112,20 @@ footer {
 
     li {
         border-right: 0.5px solid #9A9A9C;
-       margin-bottom: 18px;
+        padding:0 10px;
+        margin-bottom: 10px;
+
     }
 
-    li:first-child {
+    li:first-child, li:nth-child(5) {
         padding-left: 0;
+    }
+    li:last-child{
+        border: none;
     }
 
     a,
     span {
-        margin: 0 10px;
         .desc-primary;
     }
 }

@@ -112,6 +112,7 @@
   .header-desktop {
     background: @color-secondary;
     .container;
+    padding: 0;
     .flex;
     text-align: center;
 
@@ -126,6 +127,8 @@
 
     input {
       .input-secondary;
+      margin-right: 20px;
+      padding-right: 71px;
     }
 
     button {
@@ -138,6 +141,12 @@
 
     li {
       margin-right: 15px;
+    }
+  }
+  .header-action{
+    padding-right: 21px;
+    li{
+      margin-left: 10px;
     }
   }
 
@@ -160,10 +169,6 @@
 }
 
 @media (min-width: 1440px) {
-
-  .header-desktop {
-    margin: auto;
-  }
 
   .logo {
     margin-right: 30px;
@@ -195,6 +200,10 @@
     }
   }
 
+.product__list{
+  display: grid;
+}
+
   .services {
     margin: auto;
     .services__inner{
@@ -204,23 +213,6 @@
 
   .news {
     margin: auto;
-  }
-
-  .footer-bottom {
-    .container;
-    .flex;
-
-    span {
-      margin: 0;
-    }
-
-    ul {
-      li:first-child {
-        a {
-          margin-left: 0;
-        }
-      }
-    }
   }
 
   .footer-middle {
@@ -242,6 +234,24 @@
 
   .footer-app__qr{
     order: 1;
+  }
+
+  .services__list{
+    display: grid;
+    transform: unset;
+  }
+
+  .footer-middle{
+    display: flex;
+  }
+
+  .footer-bottom{
+    .flex;
+    .container;
+    display: flex;
+    li:nth-child(5) {
+      padding-left: 10px;
+    }
   }
 
 }
