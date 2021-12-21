@@ -1,14 +1,27 @@
-.category{
+.category {
     .container;
     margin-bottom: 30px;
-    ul{
-        .grid(4,2,10px);
+
+    ul {
+        .flex;
         align-items: start;
-        padding: 0 20px; 
-        p{
-            .desc-primary ;
+        padding: 0 20px;
+        .grid(4,2,10px);
+
+        p {
+            .desc-primary;
             color: @color-black;
-        }    
+        }
     }
 }
 
+@media (min-width: 1280) {
+    .category {
+        ul{
+            .grid(8,1,0px);
+        }
+        p {
+            .desc-secondary-desktop;
+        }
+    }
+}

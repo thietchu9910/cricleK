@@ -69,6 +69,7 @@ footer {
     }
 
     .footer-info {
+
         .footer-address {
             .desc-primary;
 
@@ -112,20 +113,127 @@ footer {
 
     li {
         border-right: 0.5px solid #9A9A9C;
-        padding:0 10px;
+        padding: 0 10px;
         margin-bottom: 10px;
 
     }
 
-    li:first-child, li:nth-child(5) {
+    li:first-child,
+    li:nth-child(5) {
         padding-left: 0;
     }
-    li:last-child{
+
+    li:last-child {
         border: none;
     }
 
     a,
     span {
         .desc-primary;
+    }
+}
+
+
+// responsive 768px
+
+@media screen and (min-width: 768px) {
+    footer {
+        .footer-info {
+            .flex;
+            flex-wrap: wrap;
+
+            p {
+                .desc-secondary-desktop;
+
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+
+        .footer-address {
+            padding-right: 20px;
+        }
+
+        .footer-top {
+            top: -10%;
+            left: 0;
+            right: 0;
+            padding-top: 0;
+        }
+
+        .footer-top__social {
+            margin-right: 10px;
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .footer-middle .footer-title {
+            padding-top: 50px;
+        }
+
+        .footer-bottom {
+            li:nth-child(5) {
+                padding-left: 10px;
+            }
+
+            a,
+            span {
+                .desc-secondary;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .footer-title{
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+}
+@media only screen and (min-width: 1280px) {
+    footer {
+
+        .footer-middle {
+            .container;
+        }
+
+        .footer-info {
+            .container;
+            .flex;
+            padding: 0;
+        }
+
+        .footer-top {
+            .container;
+        }
+
+        .footer-top__title {
+            display: block;
+        }
+
+        .footer-app__moblie {
+            order: 2;
+            margin-right: 0 !important;
+        }
+
+        .footer-app__qr {
+            order: 1;
+            padding-left: 20px;
+        }
+
+        .footer-bottom {
+            .flex;
+            .container;
+            padding: 10px;
+        }
+
+        .footer-top__title {
+            display: inline;
+            display: block;
+        }
     }
 }
