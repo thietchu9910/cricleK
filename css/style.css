@@ -408,6 +408,17 @@ hr {
   header .header-form button {
     position: revert;
   }
+  header p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333333;
+    line-height: 18px;
+    font-size: 14px;
+  }
+  header p:hover {
+    color: #EE2E24;
+    font-weight: 600;
+  }
 }
 .category {
   max-width: 1200px;
@@ -930,9 +941,11 @@ footer {
     padding: 0;
   }
   footer .footer-top {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    max-width: 1000px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   footer .footer-top__title {
     display: block;
