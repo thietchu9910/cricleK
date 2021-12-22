@@ -19,6 +19,8 @@
 
   input {
     .input-primary;
+    display: block;
+    width: auto;
   }
 
   button {
@@ -84,7 +86,23 @@ hr {
     }
   }
 }
-
+@media screen and (max-width: 400px) {
+  
+  .header-form input{
+    padding: 10px 0;
+    padding-left: 10px;
+  }
+  .header-action li{
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-mobile {
+    input{
+      width: 400px;
+    }
+  }
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -131,6 +149,8 @@ hr {
         .input-secondary;
         margin-right: 20px;
         padding-right: 71px;
+        display: block;
+        width: auto;
       }
 
       button {
@@ -157,7 +177,7 @@ hr {
 }
 
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   header {
     .logo {
       margin-right: 30px;
@@ -173,19 +193,26 @@ hr {
 
     .header-desktop__menu {
       li {
-        margin-right: 20px;
+        margin-right: 10px;
+        p{
+          .desc-secondary ;
+        }
       }
     }
 
     .header-form {
       input {
-        margin-right: 20px;
+        margin-right: 10px;
+        display: block;
+        width: auto;
       }
-      button{
+
+      button {
         position: revert;
       }
     }
-    p{
+
+    p {
       .desc-secondary;
       font-size: 14px;
     }

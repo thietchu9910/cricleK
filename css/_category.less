@@ -1,27 +1,98 @@
 .category {
     .container;
     margin-bottom: 30px;
+    margin-top: 40px;
 
     ul {
         .flex;
-        align-items: start;
-        padding: 0 20px;
-        .grid(4,2,10px);
+        align-items: center;
+        .grid(4, 2, 10px);
+
+        a {
+            .flex;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                .flex;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: @color-primary;
+
+                    svg path {
+                        fill: @color-secondary;
+                    }
+                }
+            }
+
+        }
+
 
         p {
             .desc-primary;
             color: @color-black;
         }
+
+        li:first-child {
+            div {
+                background-color: @color-primary;
+
+                svg path {
+                    fill: @color-secondary;
+                }
+            }
+
+            p {
+                color: @color-primary;
+            }
+        }
+
+        li:last-child {
+            p {
+                color: @color-primary;
+            }
+        }
     }
 }
 
-@media (min-width: 1280) {
+@media only screen and (max-width: 400px) {
+
     .category {
-        ul{
-            .grid(8,1,0px);
+        ul {
+            .grid(3, 3, 10px);
+
+            p {
+                padding: 0 10px;
+            }
         }
-        p {
-            .desc-secondary-desktop;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .category {
+        ul {
+            .grid(8, 1, 0px);
+
+            li {
+                div {
+                    width: 80px;
+                    height: 80px;
+                } 
+            }
+
+            p {
+                .desc-primary-desktop;
+                padding: 0 25px;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
         }
     }
 }
